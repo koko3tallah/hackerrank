@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-import java.util.stream.*;
+import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
@@ -23,7 +23,7 @@ class CountSentencesResult {
 
         for (int i = 0; i < wordSet.size(); i++) {
             for (int j = 0; j < wordSet.size(); j++) {
-                if (i != j  && isAnagram(wordSet.get(i), wordSet.get(j))) {
+                if (i != j && isAnagram(wordSet.get(i), wordSet.get(j))) {
                     if (anagramCountMap.containsKey(wordSet.get(i))) {
                         anagramCountMap.put(wordSet.get(i), anagramCountMap.get(wordSet.get(i)) + 2);
                     } else {
@@ -79,8 +79,7 @@ public class CountSentences {
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-        })
-                .collect(toList());
+        }).collect(toList());
 
         int sentencesCount = Integer.parseInt(bufferedReader.readLine().trim());
 

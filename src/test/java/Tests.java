@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -42,7 +43,7 @@ public class Tests {
     }
 
     @Test
-    void testSol1() {
+    void testCountSentences() {
         String[] wordSets = {"the", "bats", "tabs", "in", "cat", "act", "war", "raw"};
         List<String> wordSet = Arrays.asList(wordSets);
 //        List<String> wordSet = new ArrayList<>();

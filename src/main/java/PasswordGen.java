@@ -1,8 +1,6 @@
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
-import static java.util.stream.Collectors.joining;
-
 
 class PasswordGenResult {
 
