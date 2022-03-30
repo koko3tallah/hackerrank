@@ -17,10 +17,6 @@ class PasswordGenResult {
         if (a.isEmpty() || a.length() > 25000 || b.isEmpty() || b.length() > 25000)
             throw new Exception("One of the strings are out of boundaries, both strings should be within 1 to 25000 character.");
 
-//        if (a.matches("[A-Za-z0-9]*") || a.matches(".*\\d+.*")
-//                || b.matches("[A-Za-z0-9]*") || b.matches(".*\\d+.*"))
-//            throw new Exception("One of the strings contains number or an uppercase letter");
-
         boolean appendToB = true;
         int minLength = a.length();
         if (b.length() < a.length()) {
@@ -55,9 +51,8 @@ public class PasswordGen {
 
         String b = bufferedReader.readLine();
 
-        String result = null;
         try {
-            result = PasswordGenResult.newPassword(a, b);
+            String result = PasswordGenResult.newPassword(a, b);
             bufferedWriter.write(result);
         } catch (Exception e) {
             bufferedWriter.write(e.getMessage());
