@@ -16,8 +16,19 @@ class MinMaxSumResult {
 
     public static void miniMaxSum(List<Integer> arr) {
         // Write your code here
+        long min = arr.get(0), max = arr.get(0);
+        long totalSum = 0;
 
+        for (Integer integer : arr) {
+            if (integer > max)
+                max = integer;
 
+            if (integer < min)
+                min = integer;
+
+            totalSum += integer;
+        }
+        System.out.println((totalSum - max) + " " + (totalSum - min));
     }
 
 }

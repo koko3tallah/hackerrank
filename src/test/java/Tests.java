@@ -62,5 +62,10 @@ public class Tests {
         CountSentencesResult.countSentences(wordSet, sentences);
     }
 
+    @Test
+    void testMinMaxSum() {
+        Integer[] arr = {8 , 3};
+        MinMaxSumResult.miniMaxSum(Arrays.asList(arr));
+    }
 
 }
