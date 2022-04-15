@@ -15,33 +15,6 @@ class FlippingTheMatrixResult {
      * The function is expected to return an INTEGER.
      * The function accepts 2D_INTEGER_ARRAY matrix as parameter.
      */
-
-    //    public static int flippingMatrix(List<List<Integer>> matrix) {
-//        // Write your code here
-//        int size = matrix.size();
-//        int h = size / 2;
-//
-//        BigInteger sum = BigInteger.ZERO;
-//        for (int i = 0; i < h; i++) {
-//            for (int j = 0; j < h; j++) {
-//                BigInteger localMax = BigInteger.ZERO;
-//                if (localMax.compareTo(BigInteger.valueOf(matrix.get(i).get(j))) < 1)
-//                    localMax = BigInteger.valueOf(matrix.get(i).get(j));
-//
-//                if (localMax.compareTo(BigInteger.valueOf(matrix.get(i).get(size - 1 - j))) < 1)
-//                    localMax = BigInteger.valueOf(matrix.get(i).get(size - 1 - j));
-//
-//                if (localMax.compareTo(BigInteger.valueOf(matrix.get(size - 1 - i).get(j))) < 1)
-//                    localMax = BigInteger.valueOf(matrix.get(size - 1 - i).get(i));
-//
-//                if (localMax.compareTo(BigInteger.valueOf(matrix.get(size - 1 - i).get(size - 1 - j))) < 1)
-//                    localMax = BigInteger.valueOf(matrix.get(size - 1 - i).get(size - 1 - j));
-//
-//                sum = sum.add(localMax);
-//            }
-//        }
-//        return sum.intValue();
-//    }
     public static int flippingMatrix(List<List<Integer>> matrix) {
         // Write your code here
         int size = matrix.size();
@@ -68,8 +41,6 @@ class FlippingTheMatrixResult {
         }
         return ((int) sum);
     }
-
-
 }
 
 public class FlippingTheMatrix {

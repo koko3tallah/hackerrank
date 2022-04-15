@@ -115,4 +115,21 @@ public class Tests {
         assertEquals(414, FlippingTheMatrixResult.flippingMatrix(matrixII));
         assertEquals(1225, FlippingTheMatrixResult.flippingMatrix(matrixIII));
     }
+
+
+    @Test
+    void testBraces() {
+        String test1 = "{}()";
+        String test2 = "{()}";
+        String test3 = "({()})";
+        String test4 = "{}(";
+        String test5 = "}{";
+
+        assertEquals("true", Parser.isBalanced(test1));
+        assertEquals("true", Parser.isBalanced(test2));
+        assertEquals("true", Parser.isBalanced(test3));
+        assertEquals("false", Parser.isBalanced(test4));
+        assertEquals("false", Parser.isBalanced(test5));
+    }
+
 }
