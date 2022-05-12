@@ -166,4 +166,20 @@ public class Tests {
         int[] actual = ChangeCalculator.getChange(5, 0.99f);
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    void testStringOccurrences() {
+        String[] inputStrings = {"aba", "baba", "aba", "xzxb"};
+        String[] inputQueries = {"aba", "xzxb", "ab"};
+
+        Integer[] expected = {2, 1, 0};
+        assertArrayEquals(expected, StringOccurrencesResult.matchingStrings(Arrays.asList(inputStrings), Arrays.asList(inputQueries)).toArray());
+    }
+
+    @Test
+    void testLonelyInteger() {
+        Integer[] input = {1, 2, 3, 4, 3, 2, 1};
+
+        assertEquals(4, UniqueElementResult.lonelyInteger(Arrays.asList(input)));
+    }
 }
