@@ -16,7 +16,7 @@ public class ChangeCalculator {
                 if (remaining > ratios[i]) {
                     result[i] = remaining % ratios[i];
                     remaining = remaining - result[i];
-                } else if (remaining == ratios[i]){
+                } else if (remaining == ratios[i]) {
                     result[i]++;
                     break;
                 }

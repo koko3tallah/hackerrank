@@ -1,4 +1,3 @@
-
 class SentenceCropping {
 
     public static String solution(String message, int K) {
