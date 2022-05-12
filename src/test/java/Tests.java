@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Tests {
@@ -132,4 +133,37 @@ public class Tests {
         assertEquals("false", Parser.isBalanced(test5));
     }
 
+
+    @Test
+    void testInterviewI() {
+        assertEquals("Codility We", SentenceCropping.solution("Codility We test coders", 14));
+        assertEquals("Codility We test code", SentenceCropping.solution("Codility We test code ", 88));
+        assertEquals("Codility We test code", SentenceCropping.solution("Codility We test code ", 23));
+        assertEquals("Codility We", SentenceCropping.solution("Codility We test code ", 11));
+        assertEquals("Codility", SentenceCropping.solution("Codility We test code ", 10));
+        assertEquals("", SentenceCropping.solution("Codility We test code ", 3));
+        assertEquals("The quick brown fox jumps over the lazy", SentenceCropping.solution("The quick brown fox jumps over the lazy dog ", 39));
+        assertEquals("To crop or not to", SentenceCropping.solution("To crop or not to crop ", 21));
+    }
+
+    @Test
+    void testInterviewII() {
+        assertEquals(2, CarSeats.solution(new int[]{1, 4, 1}, new int[]{1, 5, 1}));
+        assertEquals(3, CarSeats.solution(new int[]{4, 2, 2, 4}, new int[]{5, 5, 2, 5}));
+        assertEquals(2, CarSeats.solution(new int[]{2, 3, 4, 2}, new int[]{2, 5, 7, 2}));
+    }
+
+    @Test
+    void testInterviewIII() {
+        assertEquals(3, ReducePollution.solution(new int[]{5, 19, 8, 1}));
+        assertEquals(2, ReducePollution.solution(new int[]{10, 10}));
+        assertEquals(2, ReducePollution.solution(new int[]{3, 0, 5}));
+    }
+
+    @Test
+    void testRemaining() {
+        int[] expected = {1, 0, 0, 0, 0, 4};
+        int[] actual = ChangeCalculator.getChange(5, 0.99f);
+        assertArrayEquals(expected, actual);
+    }
 }
